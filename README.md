@@ -1,13 +1,30 @@
-# TSMMF-ESWA
-This is the official implementation of ESWA - A bidirectional cross-modal transformer representation learning model for EEG-fNIRS multimodal affective BCI
+# MeaKAM (Under Review)
+✨✨✨This is the official implementation of A Novel Multi-Graph-Structure Guided Human Lower-Limb Physiological Load Estimation Method Based on Multi-Inertial-Sensors Fusion During Walking.
 
 # Abstract
-By recognizing or regulating human emotions, the affective brain-computer interfaces (BCIs) could improve human-computer interactions. However, human emotion involves complex temporal-spatial brain networks. Therefore, unimodal brain imaging methods have difficulty to decode complex human emotions. Multimodal brain imaging methods, which capture temporal-spatial multi-dimensional brain signals, have been successfully employed in non-affective BCIs, showing extreme potential to improve the affective BCIs. In order to explore a multimodal fusion model with interpretability and improve emotion recognition performance for multimodal affective BCIs. In this study, we propose a Temporal-Spatial Multimodal Fusion (TSMMF) model, which leverages the bidirectional Cross-Modal Transformer (BCMT) to fuse electroencephalography (EEG) and functional near-infrared spectroscopy (fNIRS) multimodal brain signals. Firstly, intra-modal feature extractors and the Self-Attention Transformer were employed to construct joint EEG-fNIRS multimodal representations, reducing inter-modal differences. Secondly, the BCMT was adopted to achieve temporal-spatial multimodal fusion, followed by attention fusion to adaptively adjust the weights of the temporal-spatial multimodal features. Thirdly, modality-specific branches were introduced to preserve the unique features of each modality, then the outputs of all branches were weighted sum for emotion recognition. Furthermore, the model learned the weights of emotion-related brain regions for different modalities. Results showed that: (1) We proposed the first affective BCI based on multimodal brain imaging methods and the emotion recognition outperformed the state-of-the-art methods. (2) An accuracy of 76.15\% was achieved for cross-subject emotion decoding, representing improvements of 6.06\% and 12.44\% compared to EEG and fNIRS unimodal approaches, respectively. (3) The spatial interpretability indicated that: compared to modality-specific branches focusing on common brain regions, whereas the multimodal fusion branch emphasizes differential brain regions related to different emotions. Collectively, our method, inspired by neuroscience, could enhance the development of BCI and multimodal brain signals decoding.
+💻💻💻Wearable technology has advanced sensor-based human physiological information measurement, offering broad application prospects in health monitoring. Knee Adduction Moment (KAM) is always used as a measurement of lower-limb physiological load. Traditional musculoskeletal calculation methods  rely on collecting joint kinematics data from pressure tables and optical motion capture system. In contrast, wearable-based deep-learning methods for KAM estimation offer a more cost-effective solution. However, they still face challenges in achieving high measurement accuracy and stability. In this work, we focus on developing and validating a robust estimator for a key biomechanical marker (KAM) that can serve as a basis for downstream translational studies. We propose a deep-learning KAM measurement method (MeaKAM) based on multi-inertial-sensors fusion, which consists of four core modules. The Multi-Granularity Encoder (MGE) module captures multi-granularity temporal features. The Gait-Guided Graph Learning (GGL) Module constructs three graph structures to explicitly model the dependencies between sensors, orientations, and time steps. Finally, we introduce the Dual-Granularity Denoising Enhancement (DDE) module to improve step-wise diffusion refinement. Meanwhile, three multi-task learning strategies are used to enhance the generalization performance of MeaKAM. Extensive experiments on several real datasets show that our framework MeaKAM achieves state-of-the-art compared with counterpart estimation methods. MeaKAM achieved 0.29% BW×BH and 1.47% BW×BH in mean-square-error (MSE) with Dataset IMU-Phone and IMU-KAM, obtaining a 5.44% improvement over the SOTA, and achieving 1.95×10-4 in Squared Deviation jitter with Dataset IMU-KAM, obtaining a 39.76% improvement over the SOTA. Extensive Experiments including ablation, explainability,  calculation cost, additional lower limb indicator experiment, and configuration experiments demonstrate the wide applications of MeaKAM in lower limb motion analysis scenarios.
+![image](docs/pipeline.png)
+# Environment Layout Setup
+<img src="docs/layout.png" width="48%" style="margin-right:2%">
+<img src="docs/environment.png" width="48%">
 
-![image](https://github.com/user-attachments/assets/9ca816f6-3e56-41c2-99a6-d485cf1c65eb)
+# Comparison Results
+<img src="docs/Performance_1.png" width="32%">
+<img src="docs/Performance_2.png" width="32%">
+<img src="docs/Performance_3.png" width="32%">
 
-# data
-The data is waiting to be open sourced. If you need it, please contact tjzhangshuai@tju.edu.cn. We will provide sample data of 3 subjects.
+# Ablation Results
+<img src="docs/Ablation.png" width="60%" style="margin-left:20%">
 
-# contact
-If you have any bugs or questions please contact tjzhangshuai@tju.edu.cn
+# Code Introduction
+We provide the script to train and validate the end-to-end MeaKAM for the IMU-KAM dataset. Please modify your dataset path and run:
+```
+python main.py
+```
+
+# Data
+🚀🚀🚀 We are currently in the process of requesting permission to publicly release the full dataset. In the meantime, we have provided three sample subjects to illustrate the data construction and format. If you need additional examples, please contact fzh_sjtu@sjtu.edu.cn, and we can provide sample data from six subjects.
+
+
+# Contact
+📩📩📩 For questions or suggestions, please contact [**Zehui Feng**](mailto:fzh_sjtu@sjtu.edu.cn).
